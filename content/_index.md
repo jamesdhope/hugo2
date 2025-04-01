@@ -9,74 +9,29 @@ design:
   spacing: "6rem"
 
 sections:
-  - block: resume-biography-3
+  - block: markdown
     content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
-      username: admin
-      text: ""
-      # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Download CV
-        url: uploads/resume.pdf
+      subtitle: About Me
+      text: |-
+        I am an experienced, certified architect and AI engineer with a background in the data and computational sciences. I lead multidisciplinary engineering teams and work with research scientists, engineers, non-technical teams and business stakeholders to design, build and deploy next generation AI, ML, automation, integration and hybrid cloud capabilities. I sit on the British Standards Institute (BSI) ART1 Artificial Intelligence Committee as a National Expert contributing to standards on AI. I sit on committee at The Open Group contributing to professional standards in Ecosystems Architecture and AI. I have been a member of the University of London Data Science MSc academic tutor team teaching AI and Machine Learning. I am an IBM Certified Architect, IBM Certified AI Engineer, GCP Professional Cloud Architect, GCP Professional Machine Learning Engineer and certified in Data Science and Machine Learning (HarvardX). I am a Certified Information Systems Security Practitioner (CISSP, ISC2) and certified in Red Hat Openshift. I have engineering and technical expertise in a wide range of technologies including training / GPU stacks (NVIDIA / Slurm / Ray / PyTorch amongst others) for HPC, HCI, databases, DevOps, building on self managed infrastructure and in the cloud. I graduated with First Class honours in Computer Science and hold a Masters degree from Cambridge University.
+        
     design:
+      columns: '2'
       css_class: dark
       background:
         color: black
         image:
-          # Add your image background to `assets/media/`.
           filename: stacked-peaks.svg
           filters:
             brightness: 1.0
           size: cover
           position: center
           parallax: false
-  - block: markdown
-    content:
-      title: '📚 My Research'
-      subtitle: ''
-      text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
-
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-        
-        Please reach out to collaborate 😃
-    design:
-      columns: '1'
-  - block: collection
-    id: papers
-    content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publication
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 2
-  - block: collection
-    content:
-      title: Recent Publications
-      text: ""
-      filters:
-        folders:
-          - publication
-        exclude_featured: false
-    design:
-      view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - event
-    design:
-      view: article-grid
-      columns: 1
+  
   - block: collection
     id: news
     content:
-      title: Recent News
+      title: ''
       subtitle: ''
       text: ''
       # Page type to display. E.g. post, talk, publication...
@@ -98,7 +53,7 @@ sections:
       order: desc
     design:
       # Choose a layout view
-      view: date-title-summary
+      view: list
       # Reduce spacing
       spacing:
         padding: [0, 0, 0, 0]

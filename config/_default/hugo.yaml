@@ -6,7 +6,7 @@
 # Website name
 title: Hugo Academic CV Theme
 # Website URL
-baseURL: 'https://example.com/'
+baseURL: 'http://localhost:1313/'
 
 ############################
 ## LANGUAGE
@@ -18,6 +18,16 @@ defaultContentLanguageInSubdir: false
 removePathAccents: true
 
 ############################
+## MODULES
+############################
+
+module:
+  imports:
+    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify
+    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind
+      disable: false
+
+############################
 ## ADVANCED
 ############################
 
@@ -25,27 +35,23 @@ build:
   writeStats: true
 enableGitInfo: false
 summaryLength: 30
-pagination:
-  pagerSize: 10
-enableEmoji: true
-enableRobotsTXT: true
-footnotereturnlinkcontents: <sup>^</sup>
+enableEmoji: false
+enableRobotsTXT: false
 ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
 permalinks:
   authors: '/author/:slug/'
 disableAliases: true
 outputs:
-  home: [HTML, RSS, headers, redirects, backlinks]
+  home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
   section: [HTML, RSS]
 imaging:
-  resampleFilter: lanczos
+  resampleFilter: Lanczos
   quality: 80
-  anchor: smart
+  anchor: Center
 timeout: 600000
 taxonomies:
   author: authors
   tag: tags
-  publication_type: publication_types
 markup:
   _merge: deep
   highlight:

@@ -1,6 +1,6 @@
 ---
 # Display name
-title: 吳健雄
+title: ''
 
 # Name pronunciation (optional)
 name_pronunciation: James Hope
@@ -10,8 +10,8 @@ first_name: James
 last_name: Hope
 
 # Status emoji
-#status:
-#  icon: ☕️
+status:
+  icon: ☕️
 
 # Is this the primary user of the site?
 superuser: true
